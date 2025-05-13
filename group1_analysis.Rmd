@@ -6,7 +6,7 @@ output: html_document
 ---
 =======
 ```{r}
-#| label: role 1
+#| label: role 1 (Neha Chaudhari)
 # Loading all the required libraries
 pacman::p_load(tidyverse,
                dplyr,
@@ -21,3 +21,10 @@ gtd_filter
 
 ```
 
+```{r}
+#| label: role 2 (Mushaer Ahmed)
+attacks_per_year <- gtd_filter |> #creating a new dataframe 
+  group_by(iyear) |> #Grouping by year for easier analysis
+  summarise(total_attacks = n()) #summarizing the total number of attacks/year
+attacks_per_year
+```
